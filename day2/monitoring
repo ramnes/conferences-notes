@@ -1,0 +1,18 @@
+different sorts of monitoring:
+- graphing
+- alerting
+- more?
+
+all old software:
+- graphing: MRTG then RRD from the 90s (Graphite and Munin are/were based on it)
+- alerting: Nagios from 1996
+
+we need to consider more data sources, such as logs and browser events
+
+avoid alerts than could easily have false positives, or they will be ignored
+typical example: alerting on CPU usage, and then logrotate makes it 100%
+
+human attention is limited
+alerts should only relate to actuel enduser problems
+
+there's a tradeoff in every monitoring system
