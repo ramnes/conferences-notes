@@ -1,0 +1,16 @@
+Graphite:
+- not scalable
+- poor code base
+- not modulable
+
+InfluxDB
+- does not work
+- does not scale
+- got bought
+
+Gnocchi - started in may 2014
+- designed to be distributed and resilient to failure
+- compatible with Graphana
+- has a REST API
+
+See also carbonara and tooz
