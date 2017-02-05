@@ -1,0 +1,41 @@
+Carl Berquist
+
+The intention of Grafana was not infrastructure monitoring, but it's the most common use-case
+
+originally used for user metrics
+
+then support from influxdb
+
+grafana 2.0 get its backend (in go, with any SQL)
+
+official support from prometheus cloudwatch elastic 
+
+http://play.grafana.org/dashboard/db/stats
+
+interesting to use dots for 95th percentile so it's here but less present
+interesting to fill between min and max to see how the average is calculated
+
+time series as tables, could we have a use?
+
+you can template variables that are queried from graphite!
+
+there are shortcuts: e to edit
+
+you can publish Grafana snapshot
+
+interesting plugins:
+- worldmap plugin can map timeseries to geo points
+- diagram panel
+- simplejson-datasource: use grafana with any old system
+
+grafana.net:
+- lots of plugins
+- lots of premade dashboard
+- add your own :)
+
+future of Grafana:
+- high availability
+- dashboard folders, with permissions and so on
+- backend plugins (to support more notifications systems, other databases, etc)
+- automation
+
