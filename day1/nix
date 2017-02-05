@@ -1,0 +1,28 @@
+nix is not only an OS, it's a whole lot of tools (nix, nixos, disnix, hydra, nixops)
+they all have in common to be declarative
+
+nix package manager:
+- generic
+- reproducible
+- reliable
+- efficient
+
+even your OS installation can be declared
+
+every package is in isolation from each other (hashcode in prefix of any installation)
+
+nix packages are also declarative
+
+since no one can remember the hashs, you need to use a wrapper -> profiles (sets of sympoblic links)
+changing version of a package is just changing a symlink
+
+garbage collection = removing paths that are no longer reachable from a profile (nix-collect-garbage)
+
+no difference between build dep and run dep, just deps
+
+also see yarn and ied
+
+do you know if there were expirements to run the nix package manager on other distributions than nixos
+
+nix can runs on any distribution, even BSD or OSX
+nix is on portage :D

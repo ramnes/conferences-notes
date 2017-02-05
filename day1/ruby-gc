@@ -1,0 +1,55 @@
+@nateberkopec
+
+"memory shouldn't be an issue since there's a GC" -> that's a bit more complex than that
+
+the question = how do we reduce GC pauses?
+
+Ruby 1.8 - "Mark and sweep" GC
+- objectspace = list of Ruby objects
+- GC is triggered when we try to allow a new slot or when we hit off-objectspace ("malloc limit")
+- looks for objects references and mark all objects, and all objects that haven't been marked are freed
+- mark -> sweep -> mark -> sweep
+- takes a lot of time to mark all objects, no ruby can be executed during this time
+
+Ruby 1.8 REE (Entreprise Edition made by Phusion) - Forking webservers
+- child processes get the same memory adress and the content is being copied when they try to access it
+- so if you try to mark all the objects, you had to copy the whole memory
+
+Ruby 1.9.3 - Lazy sweep
+- sweep only when needed
+- decreases worst case time
+- mark -> sweep -> sweep -> sweep -> mark
+
+Ruby 2.0 - Bitmap marking
+- mark -> sweep -> sweep -> sweep -> mark, but the mark bit doesn't resides in the object anymore
+- copy on write friendly
+
+Ruby 2.1 - Generational GC - RGenGC
+- the idea: most objects die young
+- object are marked as new
+- if they survive more than 3 GC, they're marked as old
+- now there's minor/major GCs
+- minor GCs only iterates on new objects (so they're quicker), major on all objects
+- "protected/unprotected" objects - "protected" objects are never "old" (C extension objects for example)
+
+Ruby 2.2 - incremental GC
+- break the long mark steps (major GCs) in small steps that
+- mark -> mark -> mark -> sweep
+
+Out of Bound GC (OOBGC): disable the GC temporarly, during a web request (not mandatory, potentially dangerous, but interesting)
+
+Ruby 2.3 - new write barrier
+- "we can assume new objects referred from old objects are maybe long-lived old objects" 
+- so we don't see it on a minor GC anymore
+- didn't work? got commented out in the Ruby code
+
+Ruby 2.4 - more little changes
+- you can now control how many slots you want to keep free
+
+Ruby can only release the memory to the OS if a whole Ruby heap page has been released (we can't move objects between the heaps)
+
+The future : compacting GC
+- Jruby/Truffle already do this
+- moving objects on another heap if they're not referenced by a C extension
+- old/new pages
+- guilds (new concurrency model, looks A LOT like greenlets)

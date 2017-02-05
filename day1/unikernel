@@ -1,0 +1,20 @@
+unikernel failover? what if no more memory (no virtual memory)?
+
+grep 'vmxlsvm' /proc/cpuinfo
+
+hypervisor on OSX sucks
+
+deferpanic.com can help you
+gdb also
+
+networking not so easy for develops
+
+immutable filesystem? hard (tmpfiles, uploads)
+
+unikernel = one process = no ssh :)
+
+interpreted languages = you don't have to rebuild your whole image each time, just attach your code
+
+virgo = cli for unikernel, feels like docker
+
+ecosystem is pretty new, lots of things to do

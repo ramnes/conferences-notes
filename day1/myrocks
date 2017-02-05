@@ -1,0 +1,24 @@
+data efficiency
+
+RocksDB fork of levelDB at the origin
+MyRocks = RocksDB as a storage engine for MySQL
+
+why myrocks:
+- storage efficiency
+- better write efficiency
+- good read efficiency (might be slower for queries but that's the tradeoff)
+- effective with SSD and disks
+
+For an important web-scale workload:
+- Uses 50% the space vs compressed InnoDB
+- Uses 25% the space vs innoDB
+- Write rate to storage is 10% the InnoDB rate
+
+When to consider MyRocks:
+- You are using InnoDB
+- The database is larger than RAM
+
+But:
+- almost no documentation for now
+- no community
+- some performances can be improved

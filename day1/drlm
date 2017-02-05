@@ -1,0 +1,26 @@
+Didac Oliveira
+
+https://github.com/brainupdaters/drlm
+https://github.com/brainupdaters/fosdem17_workshop
+
+ReaR over the network (PXE or NFS), so you don't have to use a USB stick or like
+written in bash also
+
+uses nfs, ssh, https, tftp, dhcp, drlm store
+
+no GUI
+
+Integration with system monitoring tools
+- email
+- zabbix
+- nagios
+- hp openview
+
+Supports Debian, RedHat, Suse, Ubuntu
+
+has a job scheduler (plan backups)
+
+export and import DR images between DRLM servers (possibly on different sites)
+
+
+

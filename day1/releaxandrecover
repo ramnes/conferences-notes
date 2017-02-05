@@ -1,0 +1,21 @@
+https://github.com/rear/rear
+
+your files are your value, everything else can be recreated
+
+What is does: FS snapshots, and when disaster happens, reinstall and apply snapshots just as before
+
+it's not intended to use for system migrations:
+- no different hardware
+- no different architecture
+
+not in competition with configuration or migration tools
+
+Relax-and-Recover (rear)
+- disaster recovery framework
+- not a backup tools, but complements it (uses tar by default)
+- meant for experienced users
+- has a cli + config file, no GUI
+- written in bash
+- may need to be adapted for your use case
+
+The recovery system is a bootable image

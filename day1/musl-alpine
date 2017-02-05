@@ -1,0 +1,38 @@
+Natanael Copa (Alpine founder, works at Docker)
+
+original idea of Alpine : running without disk (install in RAM) (2006)
+
+started with Gentoo (and uClibc)
+
+2008 drop Gentoo
+
+problems with uClibc:
+- based on libc
+- ugly codebase
+- upstream not responding
+
+musl:
+- active
+- clean codebase
+- stable ABI
+- libc compatible
+- supports utf-8
+- lightweight simple free
+but
+- vew few others had tried (sabotage linux)
+- a lot of software assumes libc, how much to patch?
+
+but it gone suprisingly well
+2014 3.0.0 up
+
+musl code gets better and better
+
+if you want to be compatible with musl:
+- no __MUSL__ define
+- default thread stack size 80k (Windows 1Mb, glibc 8Mb, lol)
+- be careful with glibc extensions
+- strerror_r with two different prototypes, lol
+- DNS resolver works differently (send request to all nameservers and get the first response, rather than asking one by one)
+- DNS "search" keyword doesn't work
+
+being compatible with musl often make the code better
