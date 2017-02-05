@@ -1,0 +1,8 @@
+loop:  uv_loop_t
+handles: uv_handle_t
+request: uv_req_t
+other utilities
+
+only uses 4 threads, one for the event loop
+
+if you want something in libuv, do it
