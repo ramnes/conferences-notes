@@ -1,0 +1,11 @@
+kubernetes is really easy to use to scale stateless applications
+
+but what about persistent stuff (databases, etc)?
+
+extend kubernetes with a manifest that describe the whole application system ecosystem, built with "operators"
+
+CoreOS' operators are third party resources that store the metadata of complex ecosystem
+
+operators are allowing non-stateless applications to scale (almost) as easily since they represent the human operational knowledge
+
+let's make a MongoDB operator? :)
