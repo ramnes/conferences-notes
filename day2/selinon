@@ -1,0 +1,6 @@
+based on Celery, the well known distributed queue
+
+selinon implements a flow design, handles task failures (fallbacks tasks/flows), and aim to adds simplicity
+
+flow logic is into YAML files
+
