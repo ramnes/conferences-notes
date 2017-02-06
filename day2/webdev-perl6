@@ -1,0 +1,14 @@
+niner.name/talks
+
+three frameworks availables for perl 6:
+- crust
+- web
+- bailador
+
+but they're not really ready
+
+rather import Dancer2 from<Perl5>
+
+mojolicious doesn't work much more
+
+in perl6 everything is object, so you can add traits to functions
