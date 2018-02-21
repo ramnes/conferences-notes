@@ -1,0 +1,15 @@
+400 000 API calls per minute
+
+- log and monitor from day one
+- profile calls
+- alerts
+- have a way to keep secrets
+- everything needs a limit (in UX especially, otherwise users do unexpected things)
+- plans to reach limits (max int size for example)
+- use as much agnostic libraries rather than a big toolchain to make transitions easier
+- use components which allow language interoperability (rq is Python only, can't use it with lua on nginx)
+- plan downtimes
+- have a way to share settings between backend and frontend
+- maintenance mode is important (better than big fail) (keep communication open with users (chat?))
+- feature flags (activate this for x% of users)
+- accept diffrente quality of code for different parts of the system (internal stuff, no problem 5sec request)

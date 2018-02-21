@@ -1,0 +1,53 @@
+not experts
+
+Business value
+- Market share = users / market size
+
+Business risks:
+- bus factor
+- competing against open source
+- market change
+- downtime
+
+Value Developers, system, and data
+COCOMO model vs Effort model
+Then apply "added value" factors (including risk)
+Finally, compare with reimplementation price -> Make or buy?
+
+Soft factors:
+- Qality of developers
+- Architecture quality
+- Data model quality
+- Algorithmic quality
+- Code quality
+- Extensibility
+- Risks
+
+Code quality: radon
+- LOC per module
+Functions methods classes per module
+-> maintainability 
+
+Documentation:
+- comment lines
+- doc strings
+
+Cyclomatic Complexity (how many decisions nodes (if, for, etc.))
+
+100% test coverage is important but often misleading
+end-to-end tests should provide good coverage as well
+randomized tests to avoid biased/missing test cases
+
+Value = developer costs * development time
+
+Make or buy
+- Business costs (recruiting, marketing, etc)
+- Time to build that system again
+
+Add value to your startup:
+- Write good code
+- Extensible, flexible
+- Test coverage and documentation
+- Good data(base) structures
+- good algorithms
+- Reduce risks added via 3rd part dependencies

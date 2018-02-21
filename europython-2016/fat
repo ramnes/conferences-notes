@@ -1,0 +1,8 @@
+Cpython == C speed - 20x C speed
+JavaScript has JIT
+
+PyPy is not always faster than CPython (for C extensions, for example)
+FAT = static optimizer for CPython
+Python is moving fast and is the reference, let's optimize it
+
+a lot of different small optimizations

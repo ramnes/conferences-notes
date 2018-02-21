@@ -1,0 +1,28 @@
+zromq vs rest
+
+People work by talking to each other. It is how we share ideas in the real world (we don't share each other brain)
+Joe Amstrong (creator of Erlang)
+
+decompose + talk to each other = very good way to write software
+the idea is there for a long time, but we just start to have the good tool for it (kubernetes, etc)
+
+Say no to HTTP
+"If your microservices are communicating via REST, then you still have, in effect, a monolithic application"
+James Roper
+
+ZeroMQ keeps connections open, very low overhead
+it reconnects itself
+it can runs without broker
+very nice user level syntax
+
+though it's a bit lower level than HTTP
+queues are in memory
+queues can block or silently drop messages if they're full
+
+REQ/REP is a bad pattern for microservices
+Dealer/Router and Pub/sub are probably what you want to use
+
+service pattern - resource manager - consumers
+
+cobe-act
+act.zkit.MessageStream <- abstraction

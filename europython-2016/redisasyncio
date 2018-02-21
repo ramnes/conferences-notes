@@ -1,0 +1,15 @@
+based one the echo TCP server example from the doc
+one Transport and one Protocol instances created per client connected
+Protocol methods are just callbacks, not coroutines
+
+a Transport is basically just a connection/socket to a client
+
+DB was put apart so it doesn't know anything about asyncio
+pub sub is basically just a client broadcasting to all other clients connected to the same channel
+implemented with a shared channel object
+blpop = clients gettings the message one by one 
+type.MUST_WAIT to answer from a callback that has to block, then catching it and creating a coroutine so we don't block the event loop
+
+await implies a yield, and it's resumed when needed
+
+@jsaryrhe

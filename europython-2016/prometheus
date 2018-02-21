@@ -1,0 +1,11 @@
+prometheus doesn't mix metadata with metric names
+but it does poll at a scraping interval value, then apply timestamp
++ you never loose data, just preceision
+- target discovery
+- short lived jobs
+- Heroku/NATed systems
+
+prometheus is intented to run in the same network as services (if you can't, look away)
+grafana works with prometheus now
+
+prediction alerts (ALERT DiskWillFillIn4Hours)

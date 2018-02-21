@@ -1,0 +1,46 @@
+Yury Selivanov, maintainer of asyncio with Guido and Victor Stinner
+
+Problems:
+- @asyncio.coroutine was not mandatory
+- yield from, people didn't understand -> friction
+- breakages due to coroutines becoming simple routines
+
+Answer: async/await
++ syntax
++ new builtin type
++ new concepts: async for, async with
++ generic, framework agnostic
++ fast: 2x slower than a funtion call, 10-100x faster than yield coroutines
+
+coroutines are sybtype of generator, share code in C
+await = yield from = YIELD_FROM opcode
+
+example: github.com/magicstack/asyncpg
+
+asyncio is not a framework, but a toolbox for framework implementations
+
+the eventloop is standardized/pluggable
+
+asyncio is simple (but the documentation isn't, we're working on it)
+
+The only functions your need to know are: 
+- asyncio.get_event_loop()
+- loop.create_task(): wraps a coroutine
+- asyncio.gather(): awaits on multiple coroutines
+- loop.run_in_executor(): runs slow CPU-intensive or blocking IO in a thead or
+  process pool
+- loop.close()
+
+asyncio debugging:
+- PYTHONASYNCIODEBUG=1 or loop.set_debug() <- very important to use, it helps a
+  lot when using asnycio
+- configure python logging to see errors, and your test runner to print warnings
+
+uvloop:
+- written with cython
+- uses libuv
+- 2-4x faster than asyncio
+- faster than go sockets and nodejs
+
+python-ideas & python-dev to propose idea, then write a PEP
+python bug tracker

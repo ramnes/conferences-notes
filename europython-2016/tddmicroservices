@@ -1,0 +1,31 @@
+github.com/butla
+
+idependant and cooperating
+12 factor
+
+unit tests doesn't check if the whole stuff works
+-> tests the entire application locally
+
+you can mock (wiremock, pretenders, mountebank)
+
+"verified fakes" are interesting
+use docker for the whole architecture
+
+functional tests == service tests == component tests
+
+TDD:
++ confidence
++ automation
++ ward off bad design
+but requires:
+- discipline
+- tools
+
+use docker python client to automate architecture for tests
+mountepy
+
+other people commits in a TDD
+- test coverage (fail_under = 100 is nice, parallel = true is awesome, pylint)
+- contract tests, ie swagger, will help you automising your service tests
+
+snap CI

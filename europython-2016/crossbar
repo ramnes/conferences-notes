@@ -1,0 +1,10 @@
+avoid spaghetti
+- divide and conquer
+- one thing, one responsibility
+- decoupling
+
+Traveling Salesman Problem as example of microservices
+- microservices: compute, orchestrator, admin UI, user UI
+
+Crossbar is a router that everything connects to
+it's open source, you can run it yourself

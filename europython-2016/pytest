@@ -1,0 +1,28 @@
+@hackebrot
+
+py.test becomes pytest on next version
+
+use yield_fixtures and parametrize!
+
+fixtures also support params
+
+use plugins for company specific things (see cookiecutter-pytest-plugin for an example)
+
+hackebrot.github.io/pytest-tricks
+
+- --fixtures to list all fixtures and their docstrings
+
+new features:
+- approx(): floats comparisent
+- doctest_namespace test documentation
+- name
+- pytest.mark.parametrize (and the parameters "ids" makes it even better)
+- --fixtures-per-test
+- pytest warnings summary is shown by default (--disable-pytest-warnings)
+- lots of deprecations
+
+blog.pytest.org
+
+docs.pytest.org -> examples (good practices should be shown here)
+-> no dos and don't dos, but if you feel that something is missing, talk to us
+-> don't put fixtures in conftest, it has side effects
