@@ -1,0 +1,13 @@
+made by an engineer at RH (previously CoreOS)
+
+go execution model (goroutines rather than thread) makes it difficult to debug
+with traditional tools because you can switch between different contexts
+(goroutines are multiplexed across threads)
+
+Mozilla RR seems very nice, can help you debug bugs that only happen sometimes
+by recording every frame and its context and then replaying everything so that
+if you succeed to trigger a bug once, you can then debug in a deterministic
+meaner.
+
+dlv replay can run RR records and debug on them
+

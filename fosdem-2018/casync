@@ -1,0 +1,26 @@
+Content-Adressable data SYNChronization tool
+
+file system tree synchronizer
+think git + rsync
+
+can be used for backup
+good for CDN
+can act at the block layer or the file system level
+uses catar, which is basically the same as tar but reproducible
+buzhash algorithm (to split into chunks)
+zackstd (compression algorithm)
+
+if you reduce the chunk average size, then you improve the change of chunk
+reusability, right? what's the tradeoff, and how to choose that zie?
+
+squashfs?
+
+the chunck algorithm allows random access to different parts of an image, which
+mean that a single directory can be extracted from an image
+
+future:
+- caching: make repeated image generation cheap
+- chunking: tewak the chunking
+- backup
+- auto, secure $HOME sync
+- crypto

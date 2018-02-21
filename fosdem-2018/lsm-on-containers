@@ -1,0 +1,9 @@
+lsm policies are setup at boot
+per task default lsm
+
+networking problems - secids/secmarks weren't made to have multiple lsm
+
+IMA, smack, SeLinux, Audit, AppArmor are all discussing/working on namespacing
+
+https://github.com/cschaufler/lsm-stacking
+https://github.com/jrjohansen/lsm-stacking

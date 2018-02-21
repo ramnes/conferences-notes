@@ -1,0 +1,8 @@
+Go 1.10 adds the following features:
+- tests now cache tests results if FS doesn't change (or stuff like that)
+- tests can now output in json so that you don't have to parse
+- Three-index slicing?
+- continue and break inside templates loops
+- Strings.builder
+- unicode ("mindblown" emoji is so cool)
+- no improvments in performance, but compiler is faster

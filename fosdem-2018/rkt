@@ -1,0 +1,15 @@
+based on appc (quid of OSI support?)
+no daemon, just a CLI
+there's a "fly" stage1mode in which you can run a container without any kind of isolation (just a chroot)
+
+CRI defines a Runtime interface, that kublet uses to talk with rktlet via gRPC
+
+rkt seems to rely a lot (too much?) on systemd, wether it's for running it, or to run processes insides containers (?!) 
+
+coming next:
+- CNI 0.6.0
+- runc for stage2?
+- casync?
+- native OCI support? (it exists but is currently integrated in Docker compatibility and needs conversions)
+- performance
+- pass more k8s e2e conformance tests

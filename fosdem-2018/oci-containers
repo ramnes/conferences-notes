@@ -1,0 +1,4 @@
+reminder: a container is just a process controlled by cgroups and namespaces
+
+image: manifest, image index (optional), fs things
+

@@ -1,0 +1,25 @@
+devops vs opsdev 
+observability is what makes developers initerested in the ops world and make them opsdev 
+
+think business on your infrastructure and production
+tests, benchmarks and exceptions aren't enough
+
+what data to collect to gain confidence in your releases?
+
+feature flags are great
+graphs per feature flags
+
+canary deployment vs feature flags
+
+be able to query data to validate or invalidate hypotheses about the root cause
+of any problem
+
+collect business relevant metrics (customer ids, etc)
+
+add custom fields for validating hypotheses
+
+prune stale fields if necessary
+
+best with contextual and structured data, consistent naming
+
+honeycomb.io/blog/categories/dogfooding 

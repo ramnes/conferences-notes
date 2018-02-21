@@ -1,0 +1,17 @@
+Google has 10ks of micro service (100s of team)
+
+how to find out what's the root cause of a problem across multiple services?
+
+use tags everywhere (trace originator=analytic if a requests comes from the
+analytics service)
+
+opencensus.io
+
+being able to see the timeline of every service used for a request is awesome
+
+raw vs aggregate
+
+serviceability must be holistic and use different signal types
+
+proemion gmbh 
+

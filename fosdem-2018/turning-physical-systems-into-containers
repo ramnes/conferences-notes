@@ -1,0 +1,7 @@
+huge demo
+
+if your VM is CPU-bound then it's not worth it to move it to a container
+if your VM is idling, then move it to LXD and save lots of CPU cycles
+interesting for relicate systems too
+
+Stéphane Graber

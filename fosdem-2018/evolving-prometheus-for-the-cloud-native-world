@@ -1,0 +1,8 @@
+prometheus has arbitrary multi-dimensionnal labels (as opposed to Graphite, for example, which has kind of "folders" you have to know the structure about)
+
+Prometheus is meant to be reliable: each server is independant and only relies on local SSD
+
+no clustering or attempts to backfill "missing" data
+
+Disk write divided by 100 between Prometheus 2 and 3
+
