@@ -1,0 +1,15 @@
+sphinx-quickstart + doctest + autosummary + coverage = la vérité
+
+quand on fait make html ça execute tout ce qui est global (load des modules), mais __name__ != "__main__"
+
+"info field list" for argument spec
+
+:members:
+:undoc-members:
+:private-members:
+:special-members:
+:inherited-members:
+
+sphinxcontrib-httpdomains for HTTP APIs
+
+il y a aussi sphinxcontrib.autohttp.flask

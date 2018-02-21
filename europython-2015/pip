@@ -1,0 +1,17 @@
+nouvelle option pour pip: -c/--constraint constraints.txt -> forcer une version d'une dépendance, même si d'autres paquets veulent une autre
+
+
+{':python_version=="3.3"': ['asyncio]} # install asyncio que si t'es en python 3.3
+
+on peut faire la même chose avec la plateforme (linux/win32)
+
+PEP426 va venir extend les environment markers
+
+
+
+wheel -> no setuptools needed
+
+pip part du principe que tu as forcemment setuptools d'installé pour setup.py
+
+DO NOT python setup.py install (setuptools will use easy_install)
+

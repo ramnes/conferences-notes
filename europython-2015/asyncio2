@@ -1,0 +1,55 @@
+One year later
+--------------
+
+
+
+#asyncio @Freenode
+
+Libs
+----
+
+Database: 
+aiomysql
+aiopg
+peewee-async
+aiopg.sa (SQLalchemy)
+aiomemcache
+aioredis/asyncio-redis
+aiocouchdb
+asyncio-mongodb <-------
+
+DNS: aiodns
+IRC: bottom, irc3
+SSH: asyncSSH
+XMPP: slixmpp
+AMQP: aioamqp
+Hangout: hangups
+
+Web:
+aiohttp
+aiopyramid
+aiowsgi
+API hour
+nacho
+pulsar
+rainfall
+
+Test:
+asynctest (unittest)
+pytest-asyncio (pytest)
+aiotest
+
+
+Créateur de Trollius
+
+blog.gmludo.eu -> API Hour 5x more requests per seconds than Flask/Django
+JSON serialization: 400k req/s for API Hour vs 70-79k for Django-Flask
+
+
+asyncio.org
+github.com/python/asyncio/wiki/ThirdParty
+
+vstinner@gmail.com
+
+never block the event loop (quite obvious) when writing a library that works with asyncio
+asyncio: handle more clients

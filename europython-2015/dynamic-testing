@@ -1,0 +1,10 @@
+test cases we don't think about
+
+property based testing + fuzzing
+
+test cases are generated automaticaly (fuzzing, parameter templates)
+
+test cases coverage matters
+
+hypothesis: generate test cases for random parameters generation (random ints, random texts, dates, etc)
+

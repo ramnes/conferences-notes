@@ -1,0 +1,11 @@
+ctypes is fun
+
+every object keeps its refcount
+
+dict is the most complex object (PEP 412)
+
+http://github.com/jespino/cpython-objects-access
+http://github.com/jespino
+
+code a mutable string with ctypes?
+

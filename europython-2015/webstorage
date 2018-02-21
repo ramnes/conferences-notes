@@ -1,0 +1,17 @@
+DEPOT
+
+any backend (CDN, FS, etc.)
+
+easily usable wins over features, people will build features themselves over a solid foundation
+
+allow infrastructure changes - can change at runtime
+
+DepotManager = interface to depot
+
+you can modify metadata
+
+if HTTP, it can redirect
+
+depot.readthedocs.org
+
+query of despair

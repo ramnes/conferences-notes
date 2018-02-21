@@ -1,0 +1,30 @@
+pudb (interface ncurse over pdb)
+
+tput
+infocmp
+
+blessings = wrappers ncurses en Python
+
+ioctl, etc
+
+os.isatty(sys.stdout.fileno()) = pipe or terminal output
+
+cooked raw cbreak
+
+blessed = fork de blessing avec un peu plus de stuff qui est en train de merge dans blessing
+
+urwid = widget lib
+
+click, clint
+
+readline = fancy editing command line
+
+curtsies = print keys pressed as a widget
+
+prompt-toolkit
+
+pexpect
+
+termcast for casting terminal sessions, asciinema
+
+tmuxp = interact with tmux with Python

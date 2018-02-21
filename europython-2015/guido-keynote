@@ -1,0 +1,21 @@
+https://www.python.org/dev/peps/pep-0492/
+
+HotPy: https://sites.google.com/site/makingcpythonfast/
+
+python2.7 won't get any more feature
+python3 is the way to go, this is the future
+
+not enought core developers
+
+future:
+- remove GIL?
+- Python on Android and iOS
+- Python in the browser
+
+questions:
+- GIL? if we remove GIL we introduce per object lock but it slows Python per 2 on single threaded programs so you would have to use at least three threads to see benefits
+- Faborite language else than Python: C, modern C++, Go
+- Favorite web framework: Flask
+- Favorite editor: Emacs
+- Favorite test lib: Python3 unittest + mock
+- Favorite Exception: KeyboardInterrupt

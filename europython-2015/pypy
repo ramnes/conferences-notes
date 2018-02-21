@@ -1,0 +1,7 @@
+pymetabiosys for bridge between CPython and PyPy so C extensions that are incompatibles with PyPy
+
+just run CPython in PyPy so they share the process (so the memory) and can exchange most data without RPC or stuff like that
+
+CFFI c'est la vie
+
+PyPy arrive progressivement sur Python 3.3 il faut de l'aide pour arrive jusqu'à 3.5

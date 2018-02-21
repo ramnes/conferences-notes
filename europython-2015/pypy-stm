@@ -1,0 +1,10 @@
+pypy-stm
+
+stm = software transactionnal memory (works like a database that share infos)
+
+pypy fork without GIL
+
+works very well for heavy CPU-bound code
+
+but is slow again if IO because on thread at time can make switch between CPU and IO
+

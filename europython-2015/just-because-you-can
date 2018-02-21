@@ -1,0 +1,28 @@
+don't make abstractions that make guesses
+
+prediction | surprise
+    is better than
+
+the user expect something when using a library, if you don't do the same, he will be disapointed
+
+make the user expect exactly what's going to happen
+
+Class(dict|list|string) is bad
+better do Class.from_dict, Class.from_list, Class.from_string, etc
+
+you shouldn't have to deal with file systems, network or things like that
+
+"separation of concerns"
+
+protocol | transport
+  good        bad
+
+convenience | compromise
+
+if you provide convenience, provide it by layer so if someone needs with a lower abastraction, he can get it
+
+foo.bar.baz: sledgehammers
+are all the sub objects you access all valid Python id?
+what if non existing?
+what if conflict?
+what happens when you realise you want to add something that's already used by someone?

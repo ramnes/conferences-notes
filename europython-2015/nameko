@@ -1,0 +1,26 @@
+James Lewis & Martin Fowler published "microservices"
+martinfowler.com/articles/microservices.html
+
+microservices = divided, separate processes, talk between each others
+
+maintainability at scale
+independently scalable
+freedom of technology
+
+microservices are good if a codebase is too big for one person
+are you ready to build a distributed system?
+
+"multi-lith": monolith + some microservices
+
+builtins extensions:
+GET/POST
+AMQP RPC
+AMQP pub Sub
+Timer
+Websockets (experimental)
+
+you can build your own extension
+
+is there a big enought open source project using Nameko that we can take a look at as a real world example ? nop
+
+similar to lymph (merge ?)

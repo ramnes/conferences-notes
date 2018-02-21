@@ -1,0 +1,56 @@
+connect people with local business
+
+142 million monthly unique visitors
+77 million reviews
+
+only one repository yelp-main
+new abstraction without removing the old ones
+as Yelp grew, become a big bottleneck
+
+everyone push the same project in production multiple times a day
+
+solution : modularize
+---------------------
+
+each service is developed and deployed independently
+a service is small, covering only one aspect or feature
+
+easier to paralelize async so speed up
+
+problems
+--------
+
+consistency is really hard
+no clear usage graph
+need to maintain interfaces
+
+-> "acceptance testing" 
+docker-compose to test everything together (that can be heavyweight)
+
+stack
+-----
+
+uwsgi pyramid sqlalchemy
+http json
+swagger
+aggregator for REST APIs (not really an aggregator, just every service aggregate by itself by manually calling http to other services)
+
+mobile development
+------------------
+
+you can't update the client with the API, so maintaining multiple API versions
+
+
+monitoring
+----------
+
+ElastAlert
+Crashlytics
+PagerDuty
+
+more
+----
+
+yelp.com/engineering
+yelp.com/dataset_challenge
+
