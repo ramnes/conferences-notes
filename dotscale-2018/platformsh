@@ -1,0 +1,14 @@
+damien tourneau
+
+how to understand infrastructures?
+
+start by making a model of your infrastructure so that anyone can make sense of it
+
+his POV: the more data you have, the more noise you have
+
+alerts:
+you want as less false positive as possible
+you want as less false negative as possible
+
+bleevy? couchbase full-text seach engine
+

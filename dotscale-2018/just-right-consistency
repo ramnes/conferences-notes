@@ -1,0 +1,21 @@
+marc shapiro
+
+google spanner CP - innefficient and overkill
+cassandra AP - unsafe
+
+fmk faelles medicinkort
+
+solution: find out what needs to be replicated right now vs later
+so that we can have the best possible performance and consistency
+
+CRDTs
+
+Causal consistency
+All or nothing
+stable vs not stable
+
+patterns:
+ordered updates => cuasal consistency AP
+Joint updates => all or nothing AP
+
+AntidoteDB

@@ -1,0 +1,9 @@
+container orchestrator is a tool, not a goal
+
+we replaced our monolith with micro services so that every outage could be more like a murder mystery
+
+github.com/jpetazzo
+
+helm
+brigade
+virtual kubelet

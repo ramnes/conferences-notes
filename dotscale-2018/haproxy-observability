@@ -1,0 +1,14 @@
+the lb can be usued as an observation tower for a system observability:
+- central place
+- trusted component
+- already logs
+
+termination codes
+
+lb fairness is something interesting to monitor
+higher than average concurrency indicates slow server
+low req count indicates slow server
+
+halog can do pretty much everything to check out haproxy logs (grep, percentiles, etc)
+
+tls key generation based on /dev/random instead of /dev/urandom made tls handshake timing out 

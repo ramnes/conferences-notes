@@ -1,0 +1,19 @@
+istio
+
+externds kubernetes
+service mesh
+
+objectives:
+- see what's actually deployed
+- which endpoints are called
+- distributed traces
+
+uses envoy in front of each service to capture all the traffic and see what's happening
+
+presentation with terminals
+
+easy canary deployment
+easy traffic mirroring
+easy blue/green deployment
+
+adds TLS automatically on top of services even if they talk in HTTPS

@@ -1,0 +1,8 @@
+tkachenko
+activision, for CoD
+
+scaling kafka is hard, autoscaling kafka is impossible
+
+number of topic per kafka cluster is limited (soft limit like response time)
+
+schema registery
