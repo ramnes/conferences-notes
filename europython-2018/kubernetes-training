@@ -1,0 +1,76 @@
+kubernetes came after swarm and mesos
+won because gentler lurning curve
+
+modern runtime engines: cri-o (very kubernetes oriented), containerd (basically a fork of docker by the open-source community)
+
+containers are great for developement environment managmeent (much easier to deploy a different environment, no need to modify all the images/servers)
+
+1:N - image:containers
+
+Dockerfile:
+- no tag = defaults to latest
+- 1 docker = 1 image = multiple layers (basically each line of a dockerfile)
+
+docker inspect
+docker image history
+docker volume
+docker exec
+
+everything that interacts with kubernetes goes throught the API server (which talks to etcd, the scheduler, the controller and nodes)
+
+kubelet = deamon on each nodes that talks with the scheduler
+
+networking: pod-to-pod, or pod-to-service (throught kubeproxy) or external-to-service (LB + kubeproxy)
+
+kubernetes is mostly declarative
+
+pods, labels, annotations, services, deployments (recommended way to deploy an application)
+
+multiple containers per pod
+
+kubernetes for stateful stuff? really depends on your use-cases but can be either a good or bad idea
+
+kubernetes = yaml (you can use json but don't do it)
+
+be very careful with what cluster you're using with kubectl (easy to wipe a production service)
+- kubectl cluster-info
+- kubectl config get-contexts
+
+kubectl get nodes
+kubectl describe nodes
+kubectl get pods
+
+can give a good idea of a manifest:
+kubectl get pod etcd-minikube -n kube-system -o yaml
+
+to have some verbosity: -v=8
+
+hps horizontal pod scaler
+
+kubectl rollout hisitory deployment <name>
+
+any explanation required? kubctl explain <concept> (for example: pod)
+
+github.com/rdodev/EP2018
+
+questions:
+- istio vs contour?
+
+istio = servicemesh
+contour = ingress (no observability
+
+- when is stateful a good idea?
+
+statful things / volumes:
+- it's a tradeoff between complexity and reliability - worth it for databases, not worth it for a stateful web applications
+- nas driver recommanded, but on the opposite it's very risky to put volumes on bare metal (drivers not that good)
+
+- when deployment set with a LB, how do you do IP-forwarding and that kind of stuff? when do you want to use nginx in a pod?
+
+no IP forwarding for now (??!!), but forward all headers and adds some
+
+- what is it that you use to type the commands alone?
+
+demomagic
+
+also, dynamic provisionning of controler nodes = very hard - "if you find how to do this, you're a millionnaire"
