@@ -1,0 +1,12 @@
+the AST is super useful for static analysis
+
+astsearch
+astpath (huge, kind of grep for AST)
+
+bellybutton - custom Python linting through AST expressions
+
+greentreasnakes: nice guide to Python AST
+python-ast-explorer.com
+
+pytest, ponyorm and cosmic-ray play with the AST
+
