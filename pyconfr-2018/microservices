@@ -1,0 +1,19 @@
+michael bright
+
+standard component patterns
+strangler
+
+hybrid apps
+
+gloo
+https://github.com/solo-io/gloo
+
+allows to route between legacy apps, micro-services and serverless
+incrementally adding new functionality
+
+https://medium.com/solo-io/building-hybrid-apps-with-gloo-1eb96579b070
+
+gitops
+
+ambassador
+

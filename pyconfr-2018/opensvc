@@ -1,0 +1,5 @@
+ils font un kubernetes-like depuis 10 ans \o/ qui fonctionne en p2p ! c'est trop bien !
+
+ils supportent docker mais plein d'autres trucs genre libvirt, solaris zones, etc
+
+limité à un cluster de 16 machines

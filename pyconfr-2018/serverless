@@ -1,0 +1,29 @@
+"function as a service"
+
+no initial investment (free up to 1000 invocations), so it's super great for startups
+
+the IBM serverless solution is open source: https://github.com/apache/incubator-openwhisk
+
+https://medium.com/@amiram_26122/the-hidden-costs-of-serverless-6ced7844780b
+
+the CNCF works on the definition of serverless: https://github.com/cncf/wg-serverless
+
+frameworks pour coder et deploy les fonctions:
+chalice
+...
+
+serverless open source plateforms:
+kubeless
+fission
+openwhisk (celle de IRM)
+openfaas
+fn project
+nuclio
+spring cloud functions
+
+OpenFaaS runs on Docker Swarm and Kubernetes
+https://github.com/openfaas/faas
+https://www.openfaas.com/
+
+Grafana Labs (we should really make a dashboard for flask-graphite)
+

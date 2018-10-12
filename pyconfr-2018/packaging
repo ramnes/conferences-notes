@@ -1,0 +1,5 @@
+Guix, similaire à nix
+
+beaucoup du boulot de packaging est automatisé: pypi2deb, npm2deb, pip2rpm, etc
+
+du coup : https://framagit.org/upt/upt

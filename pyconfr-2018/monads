@@ -1,0 +1,21 @@
+vincent perez
+
+legalstart
+
+tu devrais utiliser un SimpleNamespace pour ton TimedValue 
+
+monad = a way to combine functions
+
+monadic value = a value amplified with more context
+
+nice for composition and pipelining
+
+monad:
+- a type
+- a unit function
+- a bind function
+- a map function
+
+maybe monads
+
+you can use monad to abstract repetitive "if else" safeguards
