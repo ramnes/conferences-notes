@@ -1,0 +1,25 @@
+@encukou
+
+how does Python take the code you've written and executes it
+
+lexical analysis
+tokenization : cutting things in small exploitable things
+(there's a "tokenize" module)
+INDENT/DEDENT tokens
+
+then parsing (AST creation)
+
+then compile into bytecode (code object that Python can run)
+(compile builtin function)
+dis.code_info to see what's in the code object
+code.co_code contains the code bytes
+
+bytes are regrouped by pairs
+instruction + argument
+
+dis.get_instructions to get the meaning of those bytes
+
+then CPython puts things in cache
+uses marshal for it
+
+python -m inspect inspect :)

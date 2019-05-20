@@ -1,0 +1,9 @@
+mocks are easy to write but overall pretty bad
+
+alternative: dependencies injection + interface testing
+
+interface testing - comparing our mocks and real implementations to be sure we're not out of sync 
+
+unit tests = mock (maybe)
+integration tests = no mock
+

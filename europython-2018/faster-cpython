@@ -1,0 +1,13 @@
+just an experiment, not in production nor upstream
+
+at startup, lots of time spent importing modules and creating small objects
+
+pyc creation is made with the marshal module
+
+used C99 initializers feature to get rid of the unmarshaling overhead of frozen modules
+if I get it correctly, they basically they generate the code at CPython compile time rather than startup time
+
+bench, written in Haskell, kinda like timeit but generic
+
+emacs unexec function
+

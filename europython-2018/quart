@@ -1,0 +1,19 @@
+pgjones@stet.io
+github.com/pgjones
+
+an ASGI alternative to Flask
+
+Python 3.6.1+
+
+if for some reason you can't merge quart and Flaskdo you plan to keep Flask compatibility for ever?
+
+in HTTP2 you can push more than what the client requested (really? seems like a security issue)
+request index.html, get index.html but also css and js scripts
+
+@app.websocket("/ws")
+
+- Quart-CORS
+- Quart-OpenAPI
+
+pgjones.gitlab.io/quart/flask_extensions.html
+
