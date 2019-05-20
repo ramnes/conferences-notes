@@ -1,0 +1,31 @@
+eBPF - filtering / tracing / networking
+awesome-ebpf
+bpftrace
+kubectl trace / ebpf-exporter
+
+spotify
+migration helios (in-house orchestrator) -> kubernetes
+job + sidecar = job never complete
+workaround: shared volume where the job write a file to say it's completed
+KEP sig-apps/sidecarcontainers.md
+https://github.com/kubernetes/kubernetes/issues/25908
+
+failure is normal but reliability is fundamental
+psychological safety = improved efficienty
+
+kubevirt: manage VM with Kubernetes
+used for kubespray CI
+
+istio + envoy caching (very good lightning talk)
+https://docs.google.com/document/d/1WPuim_GzhfdsnIj_tf-fIeutK0jO4aVQfVrLJFoLN3g/edit#heading=h.wjxw6fq7wefi
+
+kubectl run --restart=OnFailure creates a job / --restart=Never a pod / --restart=Always a deployment
+
+pusher wave -> modify deployment when a configmap is changed
+
+KEP 950: startup probe (disable other probes until it sucess)
+
+from OpenShift to Kubernetes
+SLO / clear contracts of the Kubernetes cluster for end users (developers)
+gave back the direct hand to the platform to developers
+
