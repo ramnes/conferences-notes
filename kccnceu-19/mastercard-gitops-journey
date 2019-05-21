@@ -1,0 +1,45 @@
+02 2018: introduction to kubernetes
+03 2018: application teams have hard time using k8s
+O4 2018: more automation
+01 2019: more base services, custom dashboards
+
+git, kubstomize, argo CD (basically diff between git and cluster state)
+
+Mastercard: on-prem infra on 3 AZ
+gitops cluster creation with concourse + PKS API (Pivotal)
+control cluster to operate the other clusters
+
+thanos: HA prometheus
+one thanos stack in every cluster, that send data to a global object storage
+one fluentbit in every cluster, that sends logs to elastic on the control cluster
+
+argo is running in the control cluster
+argo can watch docker versions and update images in deployments
+
+they have their own "ClusterSpec" CRD, which overlaps with the upcoming Cluster API spec 
+
+apiVersion: kubernetes.mc.com/v1beta1
+kind: ClusterSpec
+metadata:
+  name: cluster-specification
+spec:
+  clusterURL: https://cluster.dev.example.com:8443
+  clusterName: card-loyalty
+  baseFQDN: dev.example.com
+  clusterType: cardLoyalty
+  inheritFromTypes:
+  - singleTenant
+  - piiData
+  - pciCompliant
+  clusterNodes: 10
+  clusterPlan: medium
+
+grosse usine à gaz
+lots of kustomizations
+
+argo CD has its own Application CRD
+
+Multi-tenancy WG / SIG
+https://github.com/kubernetes-sigs/multi-tenancy
+
+one vault per cluster
