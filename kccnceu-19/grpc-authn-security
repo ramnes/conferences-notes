@@ -1,0 +1,18 @@
+gRPC microservices: authentication and security
+Jan Tattermusch @jtattermusch / Google
+
+make insecure options explicit
+
+authn options:
+- per rpc: tokens in metadata / secure transport
+- channel level: tls, mutual tls, alts (requires builtin support from gRPC)
+- "transparent": trusted proxy that does encryption/auth for you
+
+sending token with each RPC usually not an efficiency problem:
+- tokens are reused for multiple requests
+- hpack (http2)
+
+mtls is great but certificate distribution + rotation is a pain
+istio makes it transparent
+
+
