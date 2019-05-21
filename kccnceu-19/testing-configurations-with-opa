@@ -1,0 +1,29 @@
+Unit testing your Kubernetes configuration using Open Policy Agent
+Gareth Rushgrove, director @ snyk.io
+
+OPA is low-level policy engine (Rego language) and can be used on several use cases / gatekeeper uses it behind the scenes
+shift-left testing: https://en.wikipedia.org/wiki/Shift_left_testing
+
+local development is always faster than CI or cluster
+OPA is usually used in the cluster as an Admission Controller or so, what if it could be used on local development as well?
+
+conftest
+https://github.com/instrumenta/conftest
+
+$ conftest test deployment.yaml
+
+you can unit test your policies in Rego as well
+
+Rego is pretty new, not much code available online
+
+conftest is experimenting with OCI registries mediaTypes to host OPA policies
+https://github.com/open-policy-agent/opa/issues/1413
+
+yaml vs cue for k8s configurations
+
+working on a kubectl plugin, installable with krew
+$ kubectl conftest deployments
+$ kubectl conftest deployment some-deployment
+
+can be used for any structured data, not just YAML+k8s
+terraform plans, docker compose, etc (ansible!)
