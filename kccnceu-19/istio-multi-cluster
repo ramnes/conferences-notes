@@ -1,0 +1,8 @@
+Istio Multi-Cluster Service Mesh Patterns Explained - Daniel Berg & Ram Vennam, IBM
+work at IBM + Istio TOC
+
+everyone has multiple clusters (dev/prod, cost, HA)
+
+single Istio control plane / single network
+single Istio control plane / different networks with istio-gateway-ingress/egress
+multiple Istio control planes with gateways too
