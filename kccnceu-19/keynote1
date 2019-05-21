@@ -8,3 +8,25 @@ Kubernetes twitter: live code / reviews announced
 kubernetes-on-arm
 KubeCloud
 
+service mesh interface (SMI): TrafficPolicy, ...
+https://smi-spec.io/
+flagger
+kubecost
+
+https://k8s.devstats.cncf.io/d/12/dashboards
+#2 PR project on GitHub (first being Linux)
+
+kube-up.sh, haha
+Cluster API: Cluster, Machine, MachineSet, MachineDeployment
+needs bootstrapping, might give self-hosting
+SIG-Cluster-Lifecycle
+
+openstack magnum
+stackdriver
+https://root.cern.ch/
+
+crunchydata postgresql
+operatorhub.io
+
+CNCF end user members / meetings
+
