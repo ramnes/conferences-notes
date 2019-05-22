@@ -1,0 +1,21 @@
+trade-off:
+- accessibility: does it needs to be on the same node?
+- availability
+- durability
+- access mode: how many nodes can access the volume concurrently?
+
+other characteristics: performance, cost
+
+most cloud providers don't persist VMs local disks
+
+spread replicas with failure domains + anti-affnity
+failure-domain.beta.kubernetes.io
+
+storages now provide their topology with the volume topology feature
+
+kubectl taint node <node> <effect>
+
+node fencing
+statefulset recovery can be long
+
+gke has the node autorepair feature
