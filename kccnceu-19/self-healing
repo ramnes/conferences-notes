@@ -1,0 +1,3 @@
+Kubernetes gives you eventual recovery, not high availability!
+
+If you want HA for an application, run multiple pods
