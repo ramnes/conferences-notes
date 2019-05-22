@@ -1,0 +1,11 @@
+liveness probe = restart container?
+readyness probe = pod ready to take requests?
+
+SIGTERM then SIGKILL
+
+backward compatibility is a big constraint in k8s
+
+https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-readiness-gate
+
+foremast checks multiple sources and acts if someothing seems wrong (AI backed)
+
