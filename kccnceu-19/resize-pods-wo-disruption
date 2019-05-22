@@ -1,0 +1,22 @@
+kubelet evicts aggressive pods first (the ones that use the most resources out of there request)
+
+vertical pod autoscaler (VPA):
+- obeserves usage
+- recommend requests
+- optional auto-change
+
+updater modes:
+- off
+- initial: only changes requests when pod restarts
+- auto: evicts / recreate pods
+
+right now k8s makes pod spec resources requests immutable (change means restart)
+what if job was running for two hours and then you realize it has not enough resources
+
+cgroups implementation of resources reporting is not perfect and very precise
+
+spec.container.resizePolicy: NoRestart, RestartContainer (e.g. JVM application, that allows all the RAM at the beginning) or RestartPod
+
+KEP686
+
+will a modification of the pod spec in a deployment template trigger a rollout?
