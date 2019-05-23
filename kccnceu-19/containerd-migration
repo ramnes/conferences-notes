@@ -1,0 +1,47 @@
+process isolation:
+- namespaces (not conflicts on pid, net, mnt)
+- cgroups - resources limits
+- seccomp-bpf
+
+low level runtimes::
+- lxc runc lmctfy
+- create the namespaces and stuff
+
+high level runtimes:
+- cri-o
+- containerd
+
+Docker does it all and uses containerd and runc
+
+$ docker
+vvvvvvvv socket/API
+dockerd
+vvvvvvvv socket/API
+docker-containerd
+vvvvvvvv OCI
+docker-runc
+
+k8s already gives you networking / storage, you don't need those from Docker, you just need containerd
+
+with Docker: kubelete -> CRI -> dockershim -> docker -> containerd -> containers
+with containerd: containerd -> cri-containerd -> containerd -> containers
+
+CRI-O: CRI runtime made as a k8s specific high-level runtime
+
+AKS doesn't support containerd
+AKS uses moby but provides aks-engine to deploy your own clusters
+GKE you can add a new node-pool running cos_containerd and migrate
+
+Docker images are fully compatible with containerd
+
+crictl - troubleshooting
+ctr - create and manage containers
+
+big pod startup latency improvment
+uses less CPU, less memory on nodes
+
+containerd has a smaller attack surgace
+they published their full security audit
+if an attacker gets into a node, an attacker could build images locally and then deploy them, but not with containerd
+
+containerd supports multiple low-level runtimes via the "runtime handler" (v1.2)
