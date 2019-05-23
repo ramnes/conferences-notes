@@ -1,0 +1,17 @@
+Kubernetes v1.12 introduced RuntimeClass: you can have multiple runtimes per cluster!
+https://kubernetes.io/blog/2018/10/10/kubernetes-v1.12-introducing-runtimeclass/
+
+kata containers work with docker, cri-o and containerd
+intel leading, solid and maturing
+
+AWS firecracker
+originating from crosvm, targets serverless/functions area
+quickly moving and young project
+
+gvisor
+kernel in userspace concept from Google in Go
+works standalone or with containerd
+limited functionality; some applications may not work if the syscall is not implemented by gvisor
+
+singularity
+HPC/academic community focused container runtime by syslab
