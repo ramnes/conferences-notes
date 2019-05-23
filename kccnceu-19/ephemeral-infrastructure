@@ -1,0 +1,59 @@
+palantir
+
+influenced by AWS CVEs problems + chaos engineering from netflix
+immutable infram destroyed and rebuilt every 48h
+
+2017: Rubix team - rebuild infra around Kubernetes
+
+2500+ k8s nodes
+largest cluster 800+ nodes
+1000000 per day
+10K ec2 instances being destroyed and rebuilt every day
+
+they use a in-house termination controller to decide which node reboot
+
+CVE mitigation upgrades for free
+autoscaling easier
+better security posture
+
+if you kill a etcd/vault leader, you have a downtime
+controller-manager and scheduler can be killed without problem
+
+pre-termination actions framework that gracefully shutdown nodes
+
+the cloud: not actually infinite (sometimes aws doesn't have enough capacity)
+Amazon ASG can help
+
+touching 10k hosts per day make the hardware failures more frequent
+
+image pulls are expensive in both time and bandwidth (42K pulls when restarting)
+identity management causes load spikes: new certificate asked to vault at each reboot, CPU intensive -> local csr then given to vault -> 80% CPU improvment on Vault
+
+CNI plugins: Calico -> Lyft (cni-ipvlan-vpc-k8s) -> Cilium
+moved out of Calico because:
+- it had a nasty bug where it would say no more IP was available when it wasn't actually the case
+- BGP route syncing slow (5-6 min)
+- each node has to establish a link with all other nodes
+
+Lyfy has native VPC routing
+but the way it allocate the IPs get rate limited on Amazon, so they pre-allocate IPs on ENIs
+
+tried in-house CNI but scaling problems, lots of traffic pressure on the API server
+now partenring with Cilium guys to put the good things of the Lyft CNI inside
+
+retrospect:
+- took too long on some points
+- definitely worth it in the end
+
+medium.com/palantir
+
+long run jobs? ie. spark
+built health endpoints to defere termination for nodes running those jobs
+every node supposed to be restarted after 24h but max 72h
+
+ephemeral storages? no
+
+Hashicorp Packer
+https://www.packer.io/intro/
+
+planning to deploy the local node cache
