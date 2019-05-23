@@ -1,0 +1,9 @@
+spec: github.com/containernetworking/cni
+
+CNI plugin:
+- binary to handle connectivity (network interface)
+- daemon to handle reachability (routing)
+
+by default pods can not talk with each other, it's the CNI plugin that allows it via iptables or such
+
+github.com/eranyanay/cni-from-scratch
