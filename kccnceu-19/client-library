@@ -1,0 +1,39 @@
+Kontena
+
+wrote a Ruby library
+lots of pitfall, really underestimated what it meant
+do not build your own library unless you REALLY have to
+but gave a lot of good insights
+
+background: pharos, certified k8s distro / ~400 resources managed
+
+github.com/kontena/k8s-client
+github.com/kontena/pharos-cluster
+github.com/kontena/mortar to manage resources
+
+request -> authn -> authz -> admission control -> validation -> etcd
+
+API has 3 ways to auth (certificate, token, plain auth)
+kubeconfig has X number of ways 
+
+kubeconfig can point on many files
+no documentation on how the client is supposed to behave on merging rules
+token may or may not be base64
+in-cluster vs out of cluster
+but in the end everything can be refactored in a `client = k8s.Client.autoconfig`
+
+most k8s clients do stuff naively like with any REST API
+but you can't just PUT the resource you just got, API doesn't accept it (more attributes / admission controllers)
+the go client uses the server to merge
+arrays are merged and not replaced
+
+one solution is to do pretty much like the kubectl and write an annotation to remember
+then json patch sent as application/json-patch+json
+but beware, apiserver filters out empty values, even if empty sometimes means something (ingress.from)
+
+1.14 gives an alpha feature gate so that no merge logic is needed in clients anymore
+
+CRDs = you might want to have your client fully dynamic
+
+how is the feature gate named? server-side apply something
+ 
