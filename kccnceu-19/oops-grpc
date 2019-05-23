@@ -1,0 +1,38 @@
+http://spotify-everywhere.com
+
+went to cloud because "didn't want to deal with dead cables", that wouldn't scale
+but carried in-house technologies built for the datacenter with them
+
+going from cloud to cloud native is harder than just going into the cloud
+
+tried to opensource most of their stuff but only some like luigi worked great with the community
+takes a lot of time/energy to build a community
+
+used to build rather than adopting
+innovate with the community, not in your own side
+trying to shift their culture more towards being early adopters
+
+gRPC vs Hermes (in-house Spotify's), from the ops perspective:
+- less boilerplate (can generate clients)
+- easier onboarding
+- easier integration with 3rd party tools
+- resiliency patterns out of the box
+
+but those seemed like small gains for developers
+
+real developers opinion, what they should have said in the first place:
+- message integrity, encryption, authn
+- consistency, global monitoring
+- strong contracts for all services
+- ease of integration for new tools and languages
+
+takeaways:
+- infra problems ≠ developer problems, don't slow down your developers
+- people get attached to the technology they build
+- the community is the real value and can help
+
+internal #grpc-users channel really worked to help with the migration
+
+try to look throught the eyes of a developer and understand what's frustrating for them in their daily life and then change the infrastructure that way - start with the why :)
+
+developers first, not infra first
