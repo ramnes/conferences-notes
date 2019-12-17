@@ -1,0 +1,15 @@
+lafrech
+
+webargs + apispec = schema directement utilisable dans la docstring apispec
+
+flask-smorest:
+- marshmallow + webargs + apispec
+
+demo + slides sur github.com/lafrech
+
+nobatek.inef4.com/produits/proleps
+bemserver.org
+sigopti
+nature4cities
+
+github.com/lafrech/flask-smorest-sqlalchemy-example

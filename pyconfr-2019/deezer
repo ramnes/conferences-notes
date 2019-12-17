@@ -1,0 +1,10 @@
+metadatalica -> source de référence de metadata musciale interne à Deezer
+metadata sources: musicbrainz, discogs, wikipedia, etc
+
+jaccard similarity
+cosine similarity
+
+tf-idf matrix
+
+community detection: Girvan Newman
+
