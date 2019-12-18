@@ -1,0 +1,23 @@
+https://www.cncf.io/webinars/yaml-is-optional-app-developers-k8s-options/
+
+CNAB
+openappmodel.io
+
+Conway's law (communication structures your organization)
+
+buildpack = heroku / cloudfoundry
+
+tilt = hot reload on Kubernetes, really just for development
+skaffold = pretty similar
+
+do we use the LimitRanger mutating controller? if so, can we have anything else than the higest QoS class? do we want this (whether the answer is)?
+
+ksonnet = archived
+"I want the easy things to be easy, and hard things to be possible"
+
+kustomize = bunlded in kubectl! base files (that we provide) + kustomizations
+helm = we can provide base yaml files too and just have the values set up for the developer
+
+nks (netapp kubernetes service)
+
+git as a source of truth is super important
