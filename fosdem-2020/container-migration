@@ -1,0 +1,10 @@
+Container live migration: Transferring a running container from an host to another
+Parasite code is injected on the process after it's stopped, it dumps memory to disk, then it's being removed from the process
+clone3 in Kernel 5.5 allows you to create a process with a certain PID
+CRIU
+Docker has CRIU in experimental mode but is not maintained anymore so not sure how it works
+Podman has it also now since 2019, was a lot of work in selinux, runc, etc
+podman container checkpoint
+Make the checkpoint while running
+Used in Borg by Google, not yet planned for Kubernetes but that's presenter end goal (needs work on cri-o most likely)
+Presenter is very very knowledgeable

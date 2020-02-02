@@ -1,0 +1,4 @@
+eBPF allows you to throw code inside the kernel as to what to do with packets
+Can be used to replace the iptables stack
+Better performance than both iptables and ipvs
+Cilium can replace kube-proxy: cilium.link/kubeproxy-free

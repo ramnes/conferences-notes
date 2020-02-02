@@ -1,0 +1,4 @@
+Kata containers are OCI compatible so you can basically replace runC with it and still use containerd/docker on top of it
+Storage is shared with host through 9pfs, but has performance issues
+kubic
+Use RuntimeClass on k8s so that you can try out different runtimes easily

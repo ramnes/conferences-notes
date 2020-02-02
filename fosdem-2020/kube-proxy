@@ -1,0 +1,9 @@
+Laurent Bernaille
+sessionAffinity
+ipvs much better but still had limitations, most gone in 1.12
+TODO: switch kube-proxy to ipvs before we have problems with iptables
+Still not 100% feature parity with iptables
+EndpointSlices in beta in 1.17 to improve endpoints synchronization performance
+DNS: use node local cache and then TCP only
+Kernel 5.0+ improves number of conntrack records
+Cilium and eBPF is a very promising alternative

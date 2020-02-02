@@ -1,0 +1,6 @@
+Seccomp intercept syscalls and accept or deny them
+seccomp notify in 5.0 asks a userspace proccess if the syscall can be done (needs libseccomp)
+lxc implement it for mknod and mount for example
+For now changing seccomp profile needs a container restart
+lxc looks fun, I should play more with it
+Can be used to "invent" syscalls that are handled uaerspace (i.e. as a communication pipeline to lxc for example)
